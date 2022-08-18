@@ -22,7 +22,7 @@
 //   );
 
 // *creo un componente y lo exporto. Es privado de este archivo
-import Header from './components/header/header';
+import Header from './components/header/NavBar';
 import Main from './components/main/main'
 import Footer from './components/footer/footer';
  const App = () => {
