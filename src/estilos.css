@@ -1,0 +1,65 @@
+/* font-family: 'Rubik Burned', cursive; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* header */
+.header {
+	width: 90vw;
+	background-color: aqua;
+	margin: 0 auto;
+}
+.header_h1 {
+	color: darkblue;
+	font-size: 2rem;
+     margin: 2rem;
+     line-height: 2rem;
+     display: inline-block;
+	font-family: "Rubik Burned", cursive;
+     vertical-align: middle center;
+}
+.header_ul {
+	text-align: right;
+     display: inline-block;
+     margin-left: 5rem;
+}
+.header_li {
+	text-decoration: none;
+	display: inline-block;
+	margin: 2rem;
+
+	vertical-align: center;
+}
+.header_li:hover {
+	color: crimson;
+}
+
+/* main */
+.main {
+	width: 90vw;
+	height: 50vh;
+	margin: 2rem auto;
+     background-color: blue;
+     color:antiquewhite;
+}
+.main_title{
+     text-align: center;
+     padding-top: 4rem;
+     font-size: 4rem;
+}
+.main_parrafo{
+     text-align: center;
+     margin-top: 2rem;
+     padding: 2rem;
+     font-size: 2rem;
+}
+
+footer{
+     width: 90%;
+     margin: 2rem auto;
+     text-align: center;
+     background-color: black;
+     color: yellow;
+}
