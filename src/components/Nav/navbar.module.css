@@ -1,0 +1,39 @@
+.navbar {
+     width: 90vw;
+     background-color: rgb(123, 240, 240);
+     margin: 0 auto;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-evenly;
+     color: rgb(22, 22, 20);
+}
+
+h1 {
+     color: rgb(217, 169, 92);
+     font-size: 1.5rem;
+     margin: 2rem;
+     line-height: 2rem;
+
+     font-family: "Rubik Burned", cursive;
+     vertical-align: middle center;
+}
+
+ul {
+     text-align: right;
+     display: flex;
+     flex-direction: row;
+     /* margin: 2rem; */
+}
+
+li {
+     text-decoration: none;
+     display: inline-block;
+     margin: 2rem;
+
+     vertical-align: center;
+}
+
+.header_li:hover {
+     color: crimson;
+}
