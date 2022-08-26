@@ -4,7 +4,7 @@ const CartWidget = () => {
 	return (
 		<div>
 			<AiOutlineShoppingCart />
-			<span>3</span>
+			<span>5</span>
 		</div>
 	);
 };
