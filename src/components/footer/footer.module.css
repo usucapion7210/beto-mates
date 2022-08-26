@@ -1,10 +1,12 @@
-.footer {
-     background-color: black;
-     color: white;
+.Navbar {
+     background-color: rgb(76, 27, 27);
+     /* color: white; */
      width: 90%;
      margin: 0 auto;
+     font-size: 2rem;
 }
 
-.footer>h1 {
-     color: antiquewhite
+.icon {
+     font-family: Arial, Helvetica, sans-serif;
+     color: blueviolet;
 }

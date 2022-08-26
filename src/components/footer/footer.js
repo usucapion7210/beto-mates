@@ -4,7 +4,7 @@ import Navbar from "../Nav/Navbar";
 
 const Footer = () => {
 	return (
-		<footer className={estilos.footer}>
+		<footer className={estilos.Navbar}>
 			<Navbar />
 		</footer>
 	);
