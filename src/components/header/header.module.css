@@ -1,4 +1,8 @@
 .header {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: flex-start;
      background-color: rgb(77, 100, 227);
      width: 90%;
      margin: 0 auto;
