@@ -22,7 +22,7 @@
 //   );
 
 // *creo un componente y lo exporto. Es privado de este archivo
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Main from "./components/main/main";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
