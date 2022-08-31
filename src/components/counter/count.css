@@ -1,0 +1,16 @@
+.count_container {
+     width: 60%;
+     margin: 1rem auto;
+     background-color: aqua;
+     text-align: center;
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.count_button {
+     margin: 1rem;
+     padding: 0.8rem;
+}

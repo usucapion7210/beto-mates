@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-
-const ItemCount = (prop) => {
-	const [count, setCount] = useState(prop.initial);
-
-	let tope = prop.stock;
+import "./count.css";
+const ItemCount = ({ stock, initial, onAdd }) => {
+	const [count, setCount] = useState(initial);
+	let noStock = 0;
+	let tope = stock;
 	// console.log(tope);
 
 	const sumar = () => {
@@ -13,26 +13,27 @@ const ItemCount = (prop) => {
 			alert("Ud. ha llegado al maximo disponible");
 		}
 	};
-	let stock0 = prop.sinStock;
 	const restar = () => {
-		// if (count !== stock0) {
-		// 	setCount(count - 1);
-		// } else {
-		// 	alert("No hay stock disponible.");
-		// }
-
-		count !== stock0 ? setCount(count - 1) : alert("No hay stock disponible.");
+		if (count !== noStock) {
+			setCount(count - 1);
+		} else {
+			alert("No hay stock disponible.");
+		}
 	};
 
 	return (
 		<div>
-			<div>
-				<button onClick={sumar}>Sumar</button>
+			<div className="count_container">
+				<button className="count_button" onClick={sumar}>
+					Sumar
+				</button>
 				<p>Cantidad: {count} </p>
-				<button onClick={restar}>Restar</button>
+				<button className="count_button" onClick={restar}>
+					Restar
+				</button>
+				{/* <button onClick={restar}>Restar</button> */}
+				<button onClick={onAdd}>Agregar al carrito</button>
 			</div>
-
-			<button onClick>Agregar</button>
 		</div>
 	);
 };
