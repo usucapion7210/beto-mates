@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<>
 			<nav className={estilos.navbar}>
-				<h1 className="icon">Nación Matera</h1>
+				<h1 className="icon">Full equipaciones</h1>
 				<ul>
 					<li href="https://www.google.com.ar/" className="header_li">
 						Inicio

@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "../counter/ItemCount";
+// import ItemCount from "../counter/counter";
 const Main = (saludo) => {
 	return (
 		<main className="main">
@@ -8,7 +8,7 @@ const Main = (saludo) => {
 				Te presentamos nuestros producto... A ELEGIR!!!
 			</p>
 			<h3>Tienda de venta de mates y termos</h3>
-			<ItemCount initial={1} stock={10} sinStock={0} />
+			{/* <ItemCount initial={1} stock={10} sinStock={0} /> */}
 		</main>
 	);
 };

@@ -1,8 +1,23 @@
-import React from "react";
-import estilos from "./item.module.css";
+import React, { useState, useEffect } from "react";
+import { ItemList } from "../ItemList/ItemList";
+import products from "../../mocks/productos";
 
-const ItemListContainer = (props) => {
-	return <h1 className={estilos.item}>{props.saludo}</h1>;
+import "./itemListContainer.css";
+
+export const ItemListContainer = () => {
+	const [productList, setProductList] = useState([]);
+
+	const getProducts = () =>
+		new Promise((resolve, reject) => {
+			setTimeout(() => resolve(products), 2000);
+		});
+
+	useEffect(() => {
+		getProducts()
+			.then((products) => setProductList(products))
+			.catch((error) => console.error(error));
+	}, []);
+
+	return <ItemList productList={productList} />;
 };
-
-export default ItemListContainer;
+// export default ItemListContainer;
