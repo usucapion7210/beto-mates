@@ -9,7 +9,7 @@ const App = () => {
 		<>
 			<Header />
 			<Main />
-			{/* <ItemListContainer /> */}
+			<ItemListContainer />
 			<Footer />
 		</>
 	);
