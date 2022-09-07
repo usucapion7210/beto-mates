@@ -2,16 +2,15 @@
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Main from "./components/main/main";
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter } from "react-router-dom";
 // import "./estilos.css";
 const App = () => {
 	return (
-		<>
+		<BrowserRouter>
 			<Header />
 			<Main />
-			<ItemListContainer />
 			<Footer />
-		</>
+		</BrowserRouter>
 	);
 };
 

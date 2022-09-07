@@ -1,6 +1,8 @@
 import React from "react";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import estilos from "./main.module.css";
+import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
+
 // import { Counter } from "../counter/counter";
 const Main = () => {
 	return (
@@ -9,6 +11,7 @@ const Main = () => {
 			<p className="main_parrafo">
 				Te presentamos nuestros producto... A ELEGIR!!!
 			</p>
+			<ItemListContainer />
 
 			<ItemDetailContainer />
 		</main>

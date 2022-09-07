@@ -3,6 +3,7 @@ import { ItemList } from "../ItemList/ItemList";
 import products from "../../mocks/productos";
 
 import "./itemListContainer.css";
+import { AiFillExclamationCircle } from "react-icons/ai";
 
 export const ItemListContainer = () => {
 	const [productList, setProductList] = useState([]);
@@ -18,6 +19,14 @@ export const ItemListContainer = () => {
 			.catch((error) => console.error(error));
 	}, []);
 
-	return <ItemList productList={productList} />;
+	return (
+		<div>
+			<ItemList
+				style={{ display: "flex", margin: "2rem" }}
+				productList={productList}
+			/>
+			;
+		</div>
+	);
 };
 // export default ItemListContainer;

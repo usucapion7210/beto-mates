@@ -5,7 +5,7 @@ const products = [
 		price: 900,
 		stock: 10,
 		category: "remeras",
-		img: "elche.jpg",
+		img: "elche.png",
 	},
 	{
 		id: 2,
@@ -13,7 +13,7 @@ const products = [
 		price: 1200,
 		stock: 10,
 		category: "remeras",
-		img: "barcelonaEquip.jpg",
+		img: "barcelonaEquip.png",
 	},
 	{
 		id: 3,
@@ -21,7 +21,7 @@ const products = [
 		price: 1500,
 		stock: 10,
 		category: "pantalones",
-		img: "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202205/19/00132435218352____9__640x640.jpg",
+		img: "realmadrid.png",
 	},
 ];
 
