@@ -1,0 +1,18 @@
+.main {
+     width: 90vw;
+     padding: 2rem;
+     margin: 2rem auto;
+     background-color: rgba(242, 209, 144, 0.772);
+     color: rgb(7, 7, 7);
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+}
+
+.main>h1 {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 4rem;
+     text-align: center;
+}

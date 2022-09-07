@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import productos from "../../mocks/productos";
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
 	//creo mi estado
@@ -30,9 +31,9 @@ const ItemDetailContainer = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="detail-contaier">
 			<ItemDetail item={item} />
-			{console.log(item)}
+			{/* {console.log(item)} */}
 		</div>
 	);
 };

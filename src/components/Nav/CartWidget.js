@@ -1,13 +1,20 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const CartWidget = () => {
+export const CartWidget = () => {
 	return (
-		<div>
-			<AiOutlineShoppingCart />
-			<span>5</span>
+		<div style={{ padding: "2rem" }}>
+			<AiOutlineShoppingCart style={{ fontSize: "40px" }} />
+			<span
+				style={{
+					fontSize: "1.5rem",
+					backgroundColor: "red",
+					borderRadius: "10px 10px 10px 10px",
+				}}>
+				5
+			</span>
 		</div>
 	);
 };
 
-export default CartWidget;
+// export default CartWidget;

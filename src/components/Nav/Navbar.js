@@ -1,10 +1,11 @@
 import React from "react";
-import estilos from "./navbar.module.css";
+import style from "./navbar.module.css";
+import { CartWidget } from "./CartWidget";
 
 const Navbar = () => {
 	return (
 		<>
-			<nav className={estilos.navbar}>
+			<nav className={style.navbar}>
 				<h1 className="icon">Full equipaciones</h1>
 				<ul>
 					<li href="https://www.google.com.ar/" className="header_li">
@@ -17,6 +18,7 @@ const Navbar = () => {
 						Contacto
 					</li>
 				</ul>
+				<CartWidget />
 			</nav>
 		</>
 	);
