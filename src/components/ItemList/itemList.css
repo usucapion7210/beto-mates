@@ -1,0 +1,9 @@
+.itemList-container {
+     width: 80%;
+     margin: 2rem auto;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: stretch;
+}

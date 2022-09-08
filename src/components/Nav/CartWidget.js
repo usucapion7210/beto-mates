@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 export const CartWidget = () => {
 	return (
 		<div style={{ padding: "2rem" }}>
-			<AiOutlineShoppingCart style={{ fontSize: "40px" }} />
+			<AiOutlineShoppingCart style={{ fontSize: "20px" }} />
 			<span
 				style={{
 					fontSize: "1.5rem",
