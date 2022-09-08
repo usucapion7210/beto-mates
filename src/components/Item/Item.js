@@ -13,11 +13,11 @@ export const Item = ({ key, title, img, description, price, stock }) => {
 
 			<img className="item-img" src={img} alt="  {title} " />
 
-			<p className="item-descrip"> {description} </p>
+			{/* <p className="item-descrip"> {description} </p> */}
 
 			<h5 className="item-price">Precio: $ {price} </h5>
 
-			<p className="item-stock"> Stock: {stock} </p>
+			{/* <p className="item-stock"> Stock: {stock} </p> */}
 
 			<Counter stock={10} initial={1} onAdd={onAdd} />
 		</div>

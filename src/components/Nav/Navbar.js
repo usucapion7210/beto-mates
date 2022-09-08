@@ -1,28 +1,28 @@
 import React from "react";
 import style from "./navbar.module.css";
-import { CartWidget } from "./CartWidget";
+// import { CartWidget } from "./CartWidget";
 
-const Navbar = () => {
+export const Navbar = () => {
 	return (
 		<>
 			<nav className={style.navbar}>
-				<h1 className="icon">Full equipaciones</h1>
+				{/* <h1 className="icon">Full equipaciones</h1> */}
 				<ul>
 					<li href="https://www.google.com.ar/" className="header_li">
-						Inicio
+						Camisetas
 					</li>
 					<li href="https://www.google.com.ar/" className="header_li">
-						Nosotros
+						Pantalones
 					</li>
 					<li href="https://www.google.com.ar/" className="header_li">
-						Contacto
+						Gorras
 					</li>
 				</ul>
-				<CartWidget />
+				{/* <CartWidget /> */}
 			</nav>
 		</>
 	);
 };
 
-export default Navbar;
+// export default Navbar;
 // <Header/>

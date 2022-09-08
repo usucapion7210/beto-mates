@@ -8,9 +8,9 @@ const Main = () => {
 	return (
 		<main className={estilos.main}>
 			<h1 className="main_title">Tienda de Productos</h1>
-			<p className="main_parrafo">
+			{/* <p className="main_parrafo">
 				Te presentamos nuestros producto... A ELEGIR!!!
-			</p>
+			</p> */}
 			<ItemListContainer />
 
 			<ItemDetailContainer />

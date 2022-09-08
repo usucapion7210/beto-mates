@@ -3,7 +3,7 @@ import { ItemList } from "../ItemList/ItemList";
 import products from "../../mocks/productos";
 
 import "./itemListContainer.css";
-import { AiFillExclamationCircle } from "react-icons/ai";
+// import { AiFillExclamationCircle } from "react-icons/ai";
 
 export const ItemListContainer = () => {
 	const [productList, setProductList] = useState([]);
