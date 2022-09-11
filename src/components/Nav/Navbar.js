@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./navbar.module.css";
 import { CartWidget } from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
@@ -8,21 +9,24 @@ export const Navbar = () => {
 			<nav className={style.navbar}>
 				{/* <h1 className="icon">Full equipaciones</h1> */}
 				<ul className="navbar-ul">
-					<a href="https://www.google.com.ar/" className="header_li">
+					<Link to="/" className="header_li">
+						Inicio
+					</Link>
+					<Link to="/categorias/camisetas" className="header_li">
 						Camisetas
-					</a>
+					</Link>
 
-					<a href="https://www.google.com.ar/" className="header_li">
+					<Link to="/categorias/pantalon" className="header_li">
 						Pantaloncitos
-					</a>
+					</Link>
 
-					<a href="https://www.google.com.ar/" className="header_li">
+					<Link to="/categorias/gorras" className="header_li">
 						Gorras
-					</a>
+					</Link>
 				</ul>
-				<a href="/cart">
+				<Link to="/cart">
 					<CartWidget />
-				</a>
+				</Link>
 			</nav>
 		</>
 	);
