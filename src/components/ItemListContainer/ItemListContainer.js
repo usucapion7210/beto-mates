@@ -5,12 +5,12 @@ import products from "../../mocks/productos";
 import "./itemListContainer.css";
 // import { AiFillExclamationCircle } from "react-icons/ai";
 
-export const ItemListContainer = () => {
+export const ItemListContainer = (props) => {
 	const [productList, setProductList] = useState([]);
 
 	const getProducts = () =>
 		new Promise((resolve, reject) => {
-			setTimeout(() => resolve(products), 2000);
+			setTimeout(() => resolve(products), 1000);
 		});
 
 	useEffect(() => {
@@ -20,7 +20,8 @@ export const ItemListContainer = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className="Item-list-container">
+			<h1> {props.saludo} </h1>
 			<ItemList
 				style={{ display: "flex", margin: "2rem" }}
 				productList={productList}

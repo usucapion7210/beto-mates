@@ -20,7 +20,7 @@ export const Counter = ({ stock, initial, onAdd }) => {
 	};
 
 	return (
-		<div>
+		<div className="contador-contenedor">
 			<div className="count_container">
 				<button className="count_button" onClick={sumar}>
 					Sumar
@@ -30,14 +30,14 @@ export const Counter = ({ stock, initial, onAdd }) => {
 					Restar
 				</button>
 				{/* <button onClick={restar}>Restar</button> */}
-				<button
-					className="count_button"
-					onClick={() => {
-						onAdd(count);
-					}}>
-					Agregar al carrito
-				</button>
 			</div>
+			<button
+				className="count_button "
+				onClick={() => {
+					onAdd(count);
+				}}>
+				Agregar al carrito
+			</button>
 		</div>
 	);
 };

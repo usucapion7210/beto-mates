@@ -1,19 +1,23 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import estilos from "./main.module.css";
 import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
+import Cart from "../carrito/Cart";
 
 // import { Counter } from "../counter/counter";
 const Main = () => {
 	return (
 		<main className={estilos.main}>
-			<h1 className="main_title">Tienda de Productos</h1>
-			{/* <p className="main_parrafo">
-				Te presentamos nuestros producto... A ELEGIR!!!
-			</p> */}
-			<ItemListContainer />
-
-			<ItemDetailContainer />
+			<Routes>
+				<Route
+					path="/"
+					element={<ItemListContainer saludo="Bienvenidos a Nuestra Tienda" />}
+				/>
+				<Route path="/category" element={<ItemListContainer />} />
+				<Route path="/item" element={<ItemDetailContainer />} />
+				<Route path="/cart" element={<Cart />} />
+			</Routes>
 		</main>
 	);
 };

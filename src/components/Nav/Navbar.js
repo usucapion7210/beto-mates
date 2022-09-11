@@ -1,24 +1,28 @@
 import React from "react";
 import style from "./navbar.module.css";
-// import { CartWidget } from "./CartWidget";
+import { CartWidget } from "./CartWidget";
 
 export const Navbar = () => {
 	return (
 		<>
 			<nav className={style.navbar}>
 				{/* <h1 className="icon">Full equipaciones</h1> */}
-				<ul>
-					<li href="https://www.google.com.ar/" className="header_li">
+				<ul className="navbar-ul">
+					<a href="https://www.google.com.ar/" className="header_li">
 						Camisetas
-					</li>
-					<li href="https://www.google.com.ar/" className="header_li">
-						Pantalones
-					</li>
-					<li href="https://www.google.com.ar/" className="header_li">
+					</a>
+
+					<a href="https://www.google.com.ar/" className="header_li">
+						Pantaloncitos
+					</a>
+
+					<a href="https://www.google.com.ar/" className="header_li">
 						Gorras
-					</li>
+					</a>
 				</ul>
-				{/* <CartWidget /> */}
+				<a href="/cart">
+					<CartWidget />
+				</a>
 			</nav>
 		</>
 	);
