@@ -31,6 +31,7 @@ export const Counter = ({ stock, initial, onAdd }) => {
 				</button>
 				{/* <button onClick={restar}>Restar</button> */}
 			</div>
+
 			<button
 				className="count_button "
 				onClick={() => {

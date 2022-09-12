@@ -1,6 +1,6 @@
 const products = [
 	{
-		id: 1,
+		id: "1",
 		title: "Gorra Barcelona F.C.",
 		price: 3500,
 		stock: 10,
@@ -9,7 +9,7 @@ const products = [
 		img: "gorraBarsa.png",
 	},
 	{
-		id: 2,
+		id: "2",
 		title: "Equipacion F.C.Barcelona",
 		price: 10000,
 		stock: 10,
@@ -18,7 +18,7 @@ const products = [
 		img: "barcelonaEquip.png",
 	},
 	{
-		id: 3,
+		id: "3",
 		title: "Equipacion F.C.Real Madrid",
 		price: 10000,
 		stock: 10,
@@ -27,7 +27,7 @@ const products = [
 		img: "realmadrid.png",
 	},
 	{
-		id: 4,
+		id: "4",
 		title: "Pantalon Atletico de Madrid",
 		price: 500,
 		stock: 10,
@@ -36,7 +36,7 @@ const products = [
 		img: "pantalonAtleti.png",
 	},
 	{
-		id: 5,
+		id: "5",
 		title: "Gorra Adidas C.A.River Plate",
 		price: 2500,
 		stock: 10,
@@ -46,7 +46,7 @@ const products = [
 		img: "gorrariver.png",
 	},
 	{
-		id: 6,
+		id: "6",
 		title: "Pantalon corto Boca Juniors",
 		price: 1500,
 		stock: 10,

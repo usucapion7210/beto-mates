@@ -4,15 +4,17 @@ import { useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import productos from "../../mocks/productos";
 import "./ItemDetailContainer.css";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
 	//creo mi estado
 	const [item, setItem] = useState({});
+	const { idProd } = useParams();
 
 	useEffect(() => {
 		const prod = () =>
 			new Promise((res, rej) => {
-				const unProducto = productos.find((prod) => prod.id === 2);
+				const unProducto = productos?.find((prod) => prod.id === idProd);
 				console.log(unProducto);
 
 				setTimeout(() => {

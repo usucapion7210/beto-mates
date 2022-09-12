@@ -4,7 +4,7 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Main from "./components/main/main";
 import { BrowserRouter } from "react-router-dom"; // importar de react-dom
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 // import "./estilos.css";
 const App = () => {
 	return (

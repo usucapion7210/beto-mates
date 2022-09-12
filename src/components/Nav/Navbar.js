@@ -12,15 +12,15 @@ export const Navbar = () => {
 					<Link to="/" className="header_li">
 						Inicio
 					</Link>
-					<Link to="/categorias/camisetas" className="header_li">
+					<Link to="/category/camisetas" className="header_li">
 						Camisetas
 					</Link>
 
-					<Link to="/categorias/pantalon" className="header_li">
-						Pantaloncitos
+					<Link to="/category/pantalon" className="header_li">
+						Pantalon
 					</Link>
 
-					<Link to="/categorias/gorras" className="header_li">
+					<Link to="/category/gorras" className="header_li">
 						Gorras
 					</Link>
 				</ul>
