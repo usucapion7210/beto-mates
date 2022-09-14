@@ -1,7 +1,11 @@
 import React from "react";
 import estilos from "../ItemDetail/ItemDetail.module.css";
+import { Counter } from "../counter/Counter";
 
 const ItemDetail = ({ item }) => {
+	const onAdd = (cantidad) => {
+		console.log(`<h2> Ud. ha agregdo productos a su carrito ${cantidad} </h2>`);
+	};
 	return (
 		<div className={estilos.itemDetail}>
 			<img className="itemDetailImg" src={item.img} alt={item.title} />
@@ -13,6 +17,7 @@ const ItemDetail = ({ item }) => {
 				<h2 className="detail-price">precio: $ {item.price} </h2>
 				<span className="detail-stock"> stock: {item.stock} </span>
 			</div>
+			<Counter initial={1} stock={10} onAdd={onAdd} />
 		</div>
 	);
 };
