@@ -9,17 +9,14 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
 	//creo mi estado
 	const [item, setItem] = useState({});
-	const { idProd } = useParams();
+	const { id } = useParams();
 
 	useEffect(() => {
 		const prod = () =>
 			new Promise((res, rej) => {
-				const unProducto = productos?.find((prod) => prod.id === idProd);
+				const unProducto = productos?.find((prod) => prod.id === id);
+				setTimeout(() => res(id ? unProducto : productos), 500);
 				console.log(unProducto);
-
-				setTimeout(() => {
-					res(unProducto);
-				}, 2000);
 			});
 
 		prod()
@@ -30,7 +27,7 @@ const ItemDetailContainer = () => {
 			.catch((error) => {
 				console.log(error);
 			});
-	}, []);
+	}, [id]);
 
 	return (
 		<div className="detail-contaier">

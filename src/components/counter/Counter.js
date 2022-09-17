@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./count.css";
+// import { Link } from "react-router-dom";
 
 export const Counter = ({ stock, initial, onAdd }) => {
 	const [count, setCount] = useState(initial);
