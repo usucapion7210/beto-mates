@@ -1,16 +1,18 @@
 import React from "react";
-import { Counter } from "../counter/Counter";
+// import { Counter } from "../counter/Counter";
 import "./Item.css";
 import { Link } from "react-router-dom";
 
 export const Item = ({ id, title, img, description, price, stock }) => {
-	const onAdd = (cantidad) => {
-		console.log(`<h2> Ud. ha agregdo productos a su carrito ${cantidad} </h2>`);
-	};
+	// const onAdd = (cantidad) => {
+	// 	console.log(`<h2> Ud. ha agregdo productos a su carrito ${cantidad} </h2>`);
+	// };
 
 	return (
 		<div className="item-container">
-			<span key={id}>Codigo:{id}</span>
+			<span key={id} style={{ display: "none" }}>
+				Codigo:{id}
+			</span>
 			<h4 className="item">{title}</h4>
 
 			<img className="item-img" src={img} alt="{title}" />
@@ -25,7 +27,7 @@ export const Item = ({ id, title, img, description, price, stock }) => {
 				<button style={{ fontSize: " 1.5rem" }}>Detalles</button>
 			</Link>
 
-			<Counter stock={10} initial={1} onAdd={onAdd} />
+			{/* <Counter stock={10} initial={1} onAdd={onAdd} /> */}
 		</div>
 	);
 };
