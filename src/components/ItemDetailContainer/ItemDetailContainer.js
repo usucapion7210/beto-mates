@@ -16,13 +16,13 @@ const ItemDetailContainer = () => {
 			new Promise((res, rej) => {
 				const unProducto = productos?.find((prod) => prod.id === id);
 				setTimeout(() => res(id ? unProducto : productos), 500);
-				console.log(unProducto);
+				// console.log(unProducto);
 			});
 
 		prod()
 			.then((data) => {
 				setItem(data);
-				console.log(data);
+				// console.log(data);
 			})
 			.catch((error) => {
 				console.log(error);
