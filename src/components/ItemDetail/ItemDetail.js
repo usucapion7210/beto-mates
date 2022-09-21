@@ -7,15 +7,20 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
-
+// es donde tengo toda la info de mi objeto y donde se emitia la cantidad
 const ItemDetail = ({ item }) => {
 	const [quantity, setQuantity] = useState(0);
 	const { addItem } = useContext(cartContext); // voy a leer el contexto, en este caso el del carrito.
+	/* 
+	 const valoresDelContexto = useContext(cartContex);
+	 valoresDelContexto.additem
+	 ?estoy accediendo a una propiedad dentro de un{}. O podemos poner un destructuring.
+	*/
 
 	const onAdd = (quantity) => {
 		// console.log(`<h2> Ud. ha agregdo productos a su carrito ${quantity} </h2>`);
 		setQuantity(quantity);
-		addItem(item, quantity);
+		addItem(item, quantity); // genero una nueva prop llamada cantidad.
 	};
 
 	return (
