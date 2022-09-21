@@ -42,7 +42,9 @@ const CartProvaider = (props) => {
 		setCart(carritoActualizado);
 	};
 
-	const removeItem = () => {};
+	const removeItem = () => {
+		console.log("eliminando producto");
+	};
 
 	const clear = () => {
 		setCart([]);
@@ -51,7 +53,7 @@ const CartProvaider = (props) => {
 	console.log(cart);
 	return (
 		<cartContext.Provider
-			value={{ cart, addItem, isInCart, removeItem, clear }}>
+			value={{ cart, addItem, isInCart, removeItem, clear, sumarCantidad }}>
 			{props.children}
 		</cartContext.Provider>
 	);
