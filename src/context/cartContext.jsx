@@ -7,24 +7,14 @@ const CartProvaider = (props) => {
 
 	const addItem = (item, quantity) => {
 		if (isInCart(item.id)) {
-			// lo encuentro==> si esta lo sumo==>sino paso al else
-
-			// alert("ya esta en carrito");
-
 			sumarCantidad(item, quantity);
 		} else {
 			setCart([...cart, { ...item, quantity }]);
 		}
-
-		// no pase el setCart, sino una funcion que hace un setter de setCart.
-		//nueva prop para agregar la quantity al item o producto individual. Esparcia todas las propiedades del objeto llamado item y ademas una prop llamada cantidad o quantity.
-		// console.log([...cart, { ...item, quantity }]);
 	};
 
-	//corroborar se el producto ya está en el cart (isInCart)
-
 	const isInCart = (id) => {
-		return cart.some((p) => p.id === id); // si no ponemos el return nunca va a poner nada. Con esto se que el id esta en el cart, pero necesito sumarles las cantidades seleccionadas.
+		return cart.some((p) => p.id === id);
 	};
 
 	const sumarCantidad = (item, quantity) => {
@@ -42,8 +32,9 @@ const CartProvaider = (props) => {
 		setCart(carritoActualizado);
 	};
 
-	const removeItem = () => {
-		console.log("eliminando producto");
+	const removeItem = (id) => {
+		const filterProduct = cart.filter((p) => p.id !== id);
+		setCart(filterProduct);
 	};
 
 	const clear = () => {

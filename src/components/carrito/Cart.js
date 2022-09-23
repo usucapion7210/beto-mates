@@ -5,15 +5,27 @@ import estilos from "../carrito/cart.module.css";
 
 const Cart = () => {
 	const { cart, clear, removeItem } = useContext(cartContext);
+
 	return (
-		<div className={estilos.cart}>
+		<div>
 			{cart.map((p) => (
-				<div key={p.id}>
-					<h3>{p.title} </h3>
-					<button onClick={removeItem}>Eliminar Producto</button>
+				<div className={estilos.cart} key={p.id}>
+					<h3>Articulo{p.title} </h3>
+					<h3>${p.price} </h3>
+					<h3>Cantidad: {p.quantity} </h3>
+					<button onClick={() => removeItem(p.id)}>Eliminar Producto</button>
 				</div>
 			))}
-			<button onClick={clear}>Clear Cart</button>
+			<button
+				style={{
+					fontSize: "1.5rem",
+					lineHeight: "1.5rem",
+					borderRadius: ".5rem",
+					padding: ".5rem",
+				}}
+				onClick={clear}>
+				Clear Cart
+			</button>
 		</div>
 	);
 };
