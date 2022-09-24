@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./count.css";
+
 // import { Link } from "react-router-dom";
 
 export const Counter = ({ stock, initial = 1, onAdd }) => {
 	const [count, setCount] = useState(initial);
+
+	useEffect(() => {
+		setCount(initial);
+	}, [initial]);
 
 	const sumar = () => {
 		if (count < stock) {
@@ -13,7 +18,7 @@ export const Counter = ({ stock, initial = 1, onAdd }) => {
 		}
 	};
 	const restar = () => {
-		if (count !== initial) {
+		if (count !== 1) {
 			setCount(count - 1);
 		} else {
 			alert("No hay stock disponible.");

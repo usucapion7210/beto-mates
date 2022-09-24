@@ -19,15 +19,14 @@ const CartProvaider = (props) => {
 
 	const sumarCantidad = (item, quantity) => {
 		const carritoActualizado = cart.map((p) => {
-			if (p.id === item.id && p.stock < item.stock) {
+			if (p.id === item.id) {
 				const prodActualizado = {
 					...p,
-					quantity: p.quantity + quantity,
+					quantity: quantity,
 				};
 				return prodActualizado;
 			} else {
-				const prodActualizado = { ...p, quantity: p.stock };
-				return prodActualizado;
+				return p;
 			}
 		});
 		setCart(carritoActualizado);
@@ -47,6 +46,21 @@ const CartProvaider = (props) => {
 		return producto?.quantity;
 	};
 
+	const totalProductPrice = () => {
+		let acum = 0;
+		cart.forEach((prod) => {
+			acum += prod.price * prod.quantity;
+		});
+		return acum;
+	};
+	const acumuladoProducto = () => {
+		let acum = 0;
+		cart.forEach((prod) => {
+			acum += prod.price;
+		});
+		return acum;
+	};
+
 	// console.log(cart);
 	return (
 		<cartContext.Provider
@@ -58,6 +72,8 @@ const CartProvaider = (props) => {
 				clear,
 				sumarCantidad,
 				getProductQty,
+				totalProductPrice,
+				acumuladoProducto,
 			}}>
 			{props.children}
 		</cartContext.Provider>
