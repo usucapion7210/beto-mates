@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./count.css";
 // import { Link } from "react-router-dom";
 
-export const Counter = ({ stock, initial, onAdd }) => {
+export const Counter = ({ stock, initial = 1, onAdd }) => {
 	const [count, setCount] = useState(initial);
 
 	const sumar = () => {

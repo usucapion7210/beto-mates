@@ -9,8 +9,7 @@ export const Item = ({ id, title, img, description, price, stock }) => {
 	// };
 
 	return (
-		<div className="item-container">
-			<span key={id}>Codigo:{id}</span>
+		<div className="item-container" key={id}>
 			<h4 className="item">{title}</h4>
 
 			<img className="item-img" src={img} alt="{title}" />
@@ -22,7 +21,14 @@ export const Item = ({ id, title, img, description, price, stock }) => {
 			<p className="item-stock"> Stock: {stock} </p>
 
 			<Link to={`/item/${id} `}>
-				<button style={{ fontSize: " 1.5rem" }}>Detalles</button>
+				<button
+					style={{
+						fontSize: " 1.5rem",
+						borderRadius: ".5rem",
+						padding: "1rem",
+					}}>
+					Detalles
+				</button>
 			</Link>
 
 			{/* <Counter stock={10} initial={1} onAdd={onAdd} /> */}

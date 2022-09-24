@@ -19,14 +19,15 @@ const CartProvaider = (props) => {
 
 	const sumarCantidad = (item, quantity) => {
 		const carritoActualizado = cart.map((p) => {
-			if (p.id === item.id) {
+			if (p.id === item.id && p.stock < item.stock) {
 				const prodActualizado = {
 					...p,
 					quantity: p.quantity + quantity,
 				};
 				return prodActualizado;
 			} else {
-				return p;
+				const prodActualizado = { ...p, quantity: p.stock };
+				return prodActualizado;
 			}
 		});
 		setCart(carritoActualizado);
@@ -41,10 +42,23 @@ const CartProvaider = (props) => {
 		setCart([]);
 	};
 
-	console.log(cart);
+	const getProductQty = (id) => {
+		const producto = cart.find((p) => p.id === id);
+		return producto?.quantity;
+	};
+
+	// console.log(cart);
 	return (
 		<cartContext.Provider
-			value={{ cart, addItem, isInCart, removeItem, clear, sumarCantidad }}>
+			value={{
+				cart,
+				addItem,
+				isInCart,
+				removeItem,
+				clear,
+				sumarCantidad,
+				getProductQty,
+			}}>
 			{props.children}
 		</cartContext.Provider>
 	);

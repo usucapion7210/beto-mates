@@ -8,6 +8,7 @@ import "./itemListContainer.css";
 
 export const ItemListContainer = (props) => {
 	const [productList, setProductList] = useState([]);
+	const [isLoad, setIsLoad] = useState(true);
 
 	const { id } = useParams();
 
@@ -21,19 +22,30 @@ export const ItemListContainer = (props) => {
 				setTimeout(() => resolve(id ? filtrados : products), 2000);
 			});
 		getProducts()
-			.then((products) => setProductList(products))
+			.then((products) => {
+				setProductList(products);
+				setIsLoad(false);
+			})
 			.catch((error) => console.error(error));
+		return () => {
+			setIsLoad(true);
+		};
 	}, [id]);
 
 	return (
-		<div className="Item-list-container">
-			<h1> {props.saludo} </h1>
-			<ItemList
-				style={{ display: "flex", margin: "2rem" }}
-				productList={productList}
-			/>
-			;
-		</div>
+		<>
+			{isLoad ? (
+				<h3 style={{ fontSize: "4rem", color: "lime" }}>Cargando</h3>
+			) : (
+				<div className="Item-list-container">
+					<h1> {props.saludo} </h1>
+					<ItemList
+						style={{ display: "flex", margin: "2rem" }}
+						productList={productList}
+					/>
+				</div>
+			)}
+		</>
 	);
 };
 // export default ItemListContainer;
