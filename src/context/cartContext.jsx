@@ -56,7 +56,7 @@ const CartProvaider = (props) => {
 	const acumuladoProducto = () => {
 		let acum = 0;
 		cart.forEach((prod) => {
-			acum += prod.price;
+			acum += prod.quantity;
 		});
 		return acum;
 	};
