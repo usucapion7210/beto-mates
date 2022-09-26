@@ -55,9 +55,10 @@ const CartProvaider = (props) => {
 	};
 	const acumuladoProducto = () => {
 		let acum = 0;
-		cart.forEach((prod) => {
-			acum += prod.quantity;
+		cart.forEach((p) => {
+			acum += p.quantity;
 		});
+
 		return acum;
 	};
 
@@ -80,3 +81,5 @@ const CartProvaider = (props) => {
 	);
 };
 export default CartProvaider;
+
+// acum += prod.quantity;
