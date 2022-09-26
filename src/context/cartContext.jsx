@@ -53,6 +53,10 @@ const CartProvaider = (props) => {
 		});
 		return acum;
 	};
+	const mostrarTotal = () => {
+		return totalProductPrice();
+	};
+
 	const acumuladoProducto = () => {
 		let acum = 0;
 		cart.forEach((prod) => {
@@ -74,6 +78,7 @@ const CartProvaider = (props) => {
 				getProductQty,
 				totalProductPrice,
 				acumuladoProducto,
+				mostrarTotal,
 			}}>
 			{props.children}
 		</cartContext.Provider>

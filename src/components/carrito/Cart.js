@@ -5,7 +5,7 @@ import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-	const { cart, clear, removeItem, totalProductPrice } =
+	const { cart, clear, removeItem, totalProductPrice, mostrarTotal } =
 		useContext(cartContext);
 	// const cantidad = sumarCantidad()
 	return (
@@ -28,8 +28,11 @@ const Cart = () => {
 					<button onClick={() => removeItem(p.id)}>Eliminar Producto</button>
 				</div>
 			))}
-
-			<h3 style={{ color: "black" }}>Total Compra: $ {totalProductPrice()} </h3>
+			{totalProductPrice() === 0 ? (
+				""
+			) : (
+				<h3 style={{ color: "black" }}>Total Compra: $ {mostrarTotal()}</h3>
+			)}
 
 			<div style={{ width: "90vw" }}>
 				<button

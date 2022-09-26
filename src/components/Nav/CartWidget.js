@@ -15,7 +15,7 @@ export const CartWidget = () => {
 					borderRadius: "10px 10px 10px 10px",
 					textAlign: "right",
 				}}>
-				{acumuladoProducto()}
+				{acumuladoProducto() === 0 ? "" : acumuladoProducto()}
 			</span>
 		</div>
 	);

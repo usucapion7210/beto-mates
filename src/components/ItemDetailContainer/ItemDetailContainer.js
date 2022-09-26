@@ -2,9 +2,11 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import productos from "../../mocks/productos";
+// import productos from "../../mocks/productos";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
+import { dataBase } from "../../firebaseConfig";
+import { getDoc, doc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 	//creo mi estado
@@ -13,7 +15,42 @@ const ItemDetailContainer = () => {
 	const { id } = useParams();
 
 	useEffect(() => {
-		const prod = () =>
+		const itemsCollections = collection(dataBase, "productosDeportivos");
+		const ref = doc(itemsCollections, id);
+		getDoc(ref)
+			.then((res) => {
+				console.log(res);
+				setItem({
+					id: res.id,
+					...res.data(),
+				});
+				setLoad(false);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [id]);
+	console.log(id);
+
+	return (
+		<div className="detail-contaier">
+			{load ? (
+				<h3 style={{ color: "lime", fontSize: "3rem" }}>Cargando</h3>
+			) : (
+				<>
+					<ItemDetail item={item} />
+				</>
+			)}
+
+			{/* {console.log(item)} */}
+		</div>
+	);
+};
+
+export default ItemDetailContainer;
+
+/* 
+const prod = () =>
 			new Promise((res, rej) => {
 				const unProducto = productos?.find((prod) => prod.id === id);
 				setTimeout(() => res(id ? unProducto : productos), 2000);
@@ -33,21 +70,5 @@ const ItemDetailContainer = () => {
 		return () => {
 			setLoad(true);
 		};
-	}, [id]);
 
-	return (
-		<div className="detail-contaier">
-			{load ? (
-				<h3 style={{ color: "lime", fontSize: "3rem" }}>Cargando</h3>
-			) : (
-				<>
-					<ItemDetail item={item} />
-				</>
-			)}
-
-			{/* {console.log(item)} */}
-		</div>
-	);
-};
-
-export default ItemDetailContainer;
+*/
