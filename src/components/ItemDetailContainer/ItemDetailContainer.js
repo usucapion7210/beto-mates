@@ -5,8 +5,9 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 // import productos from "../../mocks/productos";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
-import { dataBase } from "../../firebaseConfig";
-import { getDoc, doc, collection } from "firebase/firestore";
+import productos from "../../mocks/productos";
+// import { db } from "../../firebaseConfig";
+// import { getDoc, doc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 	//creo mi estado
@@ -15,20 +16,26 @@ const ItemDetailContainer = () => {
 	const { id } = useParams();
 
 	useEffect(() => {
-		const itemsCollections = collection(dataBase, "productosDeportivos");
-		const ref = doc(itemsCollections, id);
-		getDoc(ref)
-			.then((res) => {
-				console.log(res);
-				setItem({
-					id: res.id,
-					...res.data(),
-				});
+		const prod = () =>
+			new Promise((res, rej) => {
+				const unProducto = productos?.find((prod) => prod.id === id);
+				setTimeout(() => res(id ? unProducto : productos), 2000);
+				// console.log(unProducto);
+			});
+
+		prod()
+			.then((data) => {
+				setItem(data);
 				setLoad(false);
+
+				// console.log(data);
 			})
 			.catch((error) => {
 				console.log(error);
 			});
+		return () => {
+			setLoad(true);
+		};
 	}, [id]);
 	console.log(id);
 
@@ -71,4 +78,20 @@ const prod = () =>
 			setLoad(true);
 		};
 
+*/
+/* 
+const itemsCollections = collection(db, "productosDeportivos");
+		const ref = doc(itemsCollections, id);
+		getDoc(ref)
+			.then((res) => {
+				console.log(res);
+				setItem({
+					id: res.id,
+					...res.data(),
+				});
+				setLoad(false);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 */
