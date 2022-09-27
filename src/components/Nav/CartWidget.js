@@ -10,7 +10,7 @@ export const CartWidget = () => {
 			<AiOutlineShoppingCart style={{ fontSize: "30px" }} />
 			<span
 				style={{
-					fontSize: "1rem",
+					fontSize: "1.1rem",
 					backgroundColor: "red",
 					borderRadius: "10px 10px 10px 10px",
 					textAlign: "right",
