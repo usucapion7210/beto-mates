@@ -31,7 +31,7 @@ const Cart = () => {
 			{totalProductPrice() === 0 ? (
 				<h3>"no se agregaron productos"</h3>
 			) : (
-				<h3 style={{ color: "black", fontSize: "1.5rem" }}>
+				<h3 style={{ color: "black", fontSize: "1.4rem" }}>
 					Total Compra: $ {totalProductPrice()}
 				</h3>
 			)}
