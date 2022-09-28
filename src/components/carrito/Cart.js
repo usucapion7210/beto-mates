@@ -5,7 +5,7 @@ import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-	const { cart, clear, removeItem, totalProductPrice, mostrarTotal } =
+	const { cart, clear, removeItem, totalProductPrice } =
 		useContext(cartContext);
 	// const cantidad = sumarCantidad()
 	return (
@@ -29,9 +29,11 @@ const Cart = () => {
 				</div>
 			))}
 			{totalProductPrice() === 0 ? (
-				""
+				<h3>"no se agregaron productos"</h3>
 			) : (
-				<h3 style={{ color: "black" }}>Total Compra: $ {mostrarTotal()}</h3>
+				<h3 style={{ color: "black", fontSize: "1.5rem" }}>
+					Total Compra: $ {totalProductPrice()}
+				</h3>
 			)}
 
 			<div style={{ width: "90vw" }}>
@@ -56,6 +58,19 @@ const Cart = () => {
 						Home
 					</button>
 				</Link>
+				{totalProductPrice() === 0 ? (
+					""
+				) : (
+					<button
+						style={{
+							fontSize: "1.5rem",
+							lineHeight: "1.5rem",
+							borderRadius: ".5rem",
+							padding: ".5rem",
+						}}>
+						finalizar compra
+					</button>
+				)}
 			</div>
 		</div>
 	);

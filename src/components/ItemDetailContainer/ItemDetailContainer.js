@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
 		const prod = () =>
 			new Promise((res, rej) => {
 				const unProducto = productos?.find((prod) => prod.id === id);
-				setTimeout(() => res(id ? unProducto : productos), 2000);
+				setTimeout(() => res(id ? unProducto : productos), 500);
 				// console.log(unProducto);
 			});
 

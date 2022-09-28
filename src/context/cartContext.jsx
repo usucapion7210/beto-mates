@@ -53,9 +53,14 @@ const CartProvaider = (props) => {
 		});
 		return acum;
 	};
-	const mostrarTotal = () => {
-		return totalProductPrice();
-	};
+	// const mostrarTotal = () => {
+	// 	let acum = 0;
+	// 	if (acum === 0) {
+	// 		return <h3>"No se cargaron productos al carrito"</h3>;
+	// 	} else {
+	// 		return <h3>{totalProductPrice()}</h3>;
+	// 	}
+	// };
 
 	const acumuladoProducto = () => {
 		let acum = 0;
@@ -78,7 +83,7 @@ const CartProvaider = (props) => {
 				getProductQty,
 				totalProductPrice,
 				acumuladoProducto,
-				mostrarTotal,
+				// mostrarTotal,
 			}}>
 			{props.children}
 		</cartContext.Provider>

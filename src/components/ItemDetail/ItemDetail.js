@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 const ItemDetail = ({ item }) => {
 	const [quantity, setQuantity] = useState(0);
-	const { addItem, getProductQty, mostrarTotal } = useContext(cartContext);
+	const { addItem, getProductQty } = useContext(cartContext);
 
 	const onAdd = (quantity) => {
 		setQuantity(quantity);
@@ -36,16 +36,7 @@ const ItemDetail = ({ item }) => {
 						<span style={{ textDecoration: "underline" }}>Ir al carrrito</span>
 					</Link>
 				)}
-				<Link to="/cart">
-					<button
-						onClick={() => {
-							mostrarTotal();
-						}}>
-						Finalizar compra
-					</button>
-				</Link>
 			</div>
-			<div></div>
 		</div>
 	);
 };

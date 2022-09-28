@@ -3,7 +3,7 @@ import "./count.css";
 
 // import { Link } from "react-router-dom";
 
-export const Counter = ({ stock, initial = 1, onAdd }) => {
+export const Counter = ({ stock, initial = 0, onAdd }) => {
 	const [count, setCount] = useState(initial);
 
 	useEffect(() => {
@@ -11,14 +11,14 @@ export const Counter = ({ stock, initial = 1, onAdd }) => {
 	}, [initial]);
 
 	const sumar = () => {
-		if (count < stock) {
+		if (initial < stock) {
 			setCount(count + 1);
 		} else {
-			alert("Ud. ha llegado al maximo disponible");
+			alert("no hay stock disponible");
 		}
 	};
 	const restar = () => {
-		if (count !== 1) {
+		if (initial !== 1) {
 			setCount(count - 1);
 		} else {
 			alert("No hay stock disponible.");
@@ -37,14 +37,17 @@ export const Counter = ({ stock, initial = 1, onAdd }) => {
 				</button>
 				{/* <button onClick={restar}>Restar</button> */}
 			</div>
-
-			<button
-				className="count_button "
-				onClick={() => {
-					onAdd(count);
-				}}>
-				Agregar al carrito
-			</button>
+			{count === 0 ? (
+				<h2>no hay productos agregados</h2>
+			) : (
+				<button
+					className="count_button "
+					onClick={() => {
+						onAdd(count);
+					}}>
+					Agregar al carrito
+				</button>
+			)}
 		</div>
 	);
 };

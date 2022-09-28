@@ -20,7 +20,7 @@ export const ItemListContainer = (props) => {
 		const getProducts = () =>
 			new Promise((resolve, reject) => {
 				const filtrados = products.filter((p) => p.category === id);
-				setTimeout(() => resolve(id ? filtrados : products), 2000);
+				setTimeout(() => resolve(id ? filtrados : products), 500);
 			});
 		getProducts()
 			.then((products) => {
