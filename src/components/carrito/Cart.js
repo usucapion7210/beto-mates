@@ -5,7 +5,7 @@ import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-	const { cart, clear, removeItem, totalProductPrice } =
+	const { cart, clear, removeItem, totalProductPrice, acumuladoProducto } =
 		useContext(cartContext);
 	// const cantidad = sumarCantidad()
 	return (
@@ -22,7 +22,7 @@ const Cart = () => {
 					/>
 					<h3>Articulo{p.title} </h3>
 
-					<h3>Cantidad: {p.quantity} </h3>
+					<h3>Cantidad: {acumuladoProducto()} </h3>
 					<h3>${p.price} </h3>
 					<h3>Total Producto: ${p.price * p.quantity} </h3>
 					<button onClick={() => removeItem(p.id)}>Eliminar Producto</button>

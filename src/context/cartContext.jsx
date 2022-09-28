@@ -53,6 +53,13 @@ const CartProvaider = (props) => {
 		});
 		return acum;
 	};
+	const totalUnProd = () => {
+		let acum = 0;
+		cart.forEach((prod) => {
+			acum += prod.price;
+		});
+		return acum;
+	};
 	// const mostrarTotal = () => {
 	// 	let acum = 0;
 	// 	if (acum === 0) {
