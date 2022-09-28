@@ -46,8 +46,8 @@ const CartProvaider = (props) => {
 		return producto?.quantity;
 	};
 
-	const totalProductPrice = () => {
-		let acum = 0;
+	const totalProductPrice = (acum) => {
+		acum = 0;
 		cart.forEach((prod) => {
 			acum += prod.price * prod.quantity;
 		});
