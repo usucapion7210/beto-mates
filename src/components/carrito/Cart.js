@@ -1,13 +1,30 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
+import { Form } from "../Form/Form";
 
 const Cart = () => {
-	const { cart, clear, removeItem, totalProductPrice, acumuladoProducto } =
+	const [idCompra, setIdCompra] = useState("");
+
+	const { cart, clear, removeItem, totalProductPrice } =
 		useContext(cartContext);
 	// const cantidad = sumarCantidad()
+	const total = totalProductPrice();
+
+	const handleId = (id) => {
+		setIdCompra(id);
+	};
+	if (idCompra) {
+		return (
+			<h3 style={{ background: "rgba(200,165,333,.5" }}>
+				Gracias por su compra. Su id de compra es:
+				<span style={{ color: "red", fontFamily: "cursive" }}>{idCompra}</span>
+			</h3>
+		);
+	}
+
 	return (
 		<div>
 			{cart.map((p) => (
@@ -28,11 +45,11 @@ const Cart = () => {
 					<button onClick={() => removeItem(p.id)}>Eliminar Producto</button>
 				</div>
 			))}
-			{totalProductPrice() === 0 ? (
+			{total === 0 ? (
 				<h3>"no se agregaron productos"</h3>
 			) : (
 				<h3 style={{ color: "black", fontSize: "1.5rem" }}>
-					Total Compra: $ {totalProductPrice()}
+					Total Compra: $ {total}
 				</h3>
 			)}
 
@@ -72,6 +89,7 @@ const Cart = () => {
 					</button>
 				)}
 			</div>
+			<Form cart={cart} total={total} clear={clear} handleId={handleId} />
 		</div>
 	);
 };
