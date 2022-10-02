@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./count.css";
 
-// import { Link } from "react-router-dom";
-
 export const Counter = ({ stock, initial = 0, onAdd }) => {
 	const [count, setCount] = useState(initial);
 

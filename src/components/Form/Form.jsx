@@ -2,7 +2,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { db } from "../../firebaseConfig";
-// import Cart from "../carrito/Cart";
+import estilos from "./form.module.css";
 
 export const Form = ({ cart, total, clear, handleId }) => {
 	const [nombre, setNombre] = useState("");
@@ -28,7 +28,6 @@ export const Form = ({ cart, total, clear, handleId }) => {
 
 	const handleChangeNombre = (e) => {
 		setNombre(e.target.value);
-		// console.log(e.target.value);
 	};
 
 	const handleChangeApellido = (e) => {
@@ -39,7 +38,7 @@ export const Form = ({ cart, total, clear, handleId }) => {
 	};
 
 	return (
-		<div>
+		<div className={estilos.form}>
 			<form action="" onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -62,7 +61,7 @@ export const Form = ({ cart, total, clear, handleId }) => {
 					value={telefono}
 					onChange={handleChangeTelefono}
 				/>
-				<button>Enviar</button>
+				<button>Finalizar compra</button>
 			</form>
 		</div>
 	);
