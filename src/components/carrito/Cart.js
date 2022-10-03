@@ -1,13 +1,44 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
+import { Form } from "../Form/Form";
 
 const Cart = () => {
-	const { cart, clear, removeItem, totalProductPrice, acumuladoProducto } =
+	const [idCompra, setIdCompra] = useState("");
+
+	const { cart, clear, removeItem, totalProductPrice } =
 		useContext(cartContext);
 	// const cantidad = sumarCantidad()
+	const total = totalProductPrice();
+
+	const handleId = (id) => {
+		setIdCompra(id);
+	};
+	if (idCompra) {
+		return (
+			<>
+				<h2 style={{ background: "rgb(214, 207, 207)" }}>
+					Gracias por su compra. Su id de compra es:
+					<span style={{ color: "red", fontFamily: "sans-serif" }}>
+						{idCompra}
+					</span>
+				</h2>
+			</>
+		);
+	}
+
+	if (cart.length === 0) {
+		return (
+			<h2>
+				No se ha agregado ningun producto... Si deseas hacerlo has click
+				<Link style={{ color: "rgb(79, 98, 242)" }} to={"/"}>
+					aquí
+				</Link>
+			</h2>
+		);
+	}
 	return (
 		<div>
 			{cart.map((p) => (
@@ -22,21 +53,30 @@ const Cart = () => {
 					/>
 					<h3>Articulo{p.title} </h3>
 
-					<h3>Cantidad: {acumuladoProducto()} </h3>
+					<h3>Cantidad: {p.quantity} </h3>
 					<h3>${p.price} </h3>
 					<h3>Total Producto: ${p.price * p.quantity} </h3>
 					<button onClick={() => removeItem(p.id)}>Eliminar Producto</button>
 				</div>
 			))}
-			{totalProductPrice() === 0 ? (
-				<h3>"no se agregaron productos"</h3>
+			{total === 0 ? (
+				<h3 style={{ color: "red;" }}>"no se agregaron productos"</h3>
 			) : (
-				<h3 style={{ color: "black", fontSize: "1.4rem" }}>
-					Total Compra: $ {totalProductPrice()}
-				</h3>
+				<div>
+					<h3 style={{ color: "black", fontSize: "1.5rem" }}>
+						Total Compra: $ {total}
+					</h3>
+					<h3
+						style={{
+							margin: ".5rem",
+						}}>
+						Completa el siguiente formulario para terminar de realizar tu copra
+					</h3>
+					<Form cart={cart} total={total} clear={clear} handleId={handleId} />
+				</div>
 			)}
 
-			<div style={{ width: "90vw" }}>
+			<div style={{ width: "90vw", margin: "1rem auto" }}>
 				<button
 					style={{
 						fontSize: "1.5rem",
@@ -58,19 +98,6 @@ const Cart = () => {
 						Home
 					</button>
 				</Link>
-				{totalProductPrice() === 0 ? (
-					""
-				) : (
-					<button
-						style={{
-							fontSize: "1.5rem",
-							lineHeight: "1.5rem",
-							borderRadius: ".5rem",
-							padding: ".5rem",
-						}}>
-						finalizar compra
-					</button>
-				)}
 			</div>
 		</div>
 	);

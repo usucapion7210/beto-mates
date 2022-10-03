@@ -4,10 +4,6 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 export const Item = ({ id, title, img, description, price, stock }) => {
-	// const onAdd = (cantidad) => {
-	// 	console.log(`<h2> Ud. ha agregdo productos a su carrito ${cantidad} </h2>`);
-	// };
-
 	return (
 		<div className="item-container" key={id}>
 			<h4 className="item">{title}</h4>
@@ -30,10 +26,6 @@ export const Item = ({ id, title, img, description, price, stock }) => {
 					Detalles
 				</button>
 			</Link>
-
-			{/* <Counter stock={10} initial={1} onAdd={onAdd} /> */}
 		</div>
 	);
 };
-
-// export default Item
