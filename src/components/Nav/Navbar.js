@@ -7,7 +7,6 @@ export const Navbar = () => {
 	return (
 		<>
 			<nav className={style.navbar}>
-				{/* <h1 className="icon">Full equipaciones</h1> */}
 				<ul className="navbar-ul">
 					<Link to="/" className="header_li">
 						Inicio

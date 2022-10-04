@@ -4,9 +4,6 @@ import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import estilos from "./main.module.css";
 import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
 import Cart from "../carrito/Cart";
-// import ItemDetail from "../ItemDetail/ItemDetail";
-
-// import { Counter } from "../counter/counter";
 const Main = () => {
 	return (
 		<main className={estilos.main}>

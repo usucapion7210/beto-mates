@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-// import productos from "../../mocks/productos";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
@@ -47,65 +46,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-/* 
-const prod = () =>
-			new Promise((res, rej) => {
-				const unProducto = productos?.find((prod) => prod.id === id);
-				setTimeout(() => res(id ? unProducto : productos), 2000);
-				// console.log(unProducto);
-			});
-
-		prod()
-			.then((data) => {
-				setItem(data);
-				setLoad(false);
-
-				// console.log(data);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-		return () => {
-			setLoad(true);
-		};
-
-*/
-/* 
-const itemsCollections = collection(db, "productosDeportivos");
-		const ref = doc(itemsCollections, id);
-		getDoc(ref)
-			.then((res) => {
-				console.log(res);
-				setItem({
-					id: res.id,
-					...res.data(),
-				});
-				setLoad(false);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-*/
-/* 
-const prod = () =>
-		// 	new Promise((res, rej) => {
-		// 		const unProducto = productos?.find((prod) => prod.id === id);
-		// 		setTimeout(() => res(id ? unProducto : productos), 500);
-		// 		// console.log(unProducto);
-		// 	});
-
-		// prod()
-		// 	.then((data) => {
-		// 		setItem(data);
-		// 		setLoad(false);
-
-		// 		// console.log(data);
-		// 	})
-		// 	.catch((error) => {
-		// 		console.log(error);
-		// 	});
-		// return () => {
-		// 	setLoad(true);
-		// };
-*/

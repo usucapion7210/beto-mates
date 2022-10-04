@@ -4,13 +4,13 @@ import { cartContext } from "../../context/cartContext";
 import estilos from "../carrito/cart.module.css";
 import { Link } from "react-router-dom";
 import { Form } from "../Form/Form";
+import { ButtonHome } from "../buttonHome/ButtonHome";
 
 const Cart = () => {
 	const [idCompra, setIdCompra] = useState("");
 
 	const { cart, clear, removeItem, totalProductPrice } =
 		useContext(cartContext);
-	// const cantidad = sumarCantidad()
 	const total = totalProductPrice();
 
 	const handleId = (id) => {
@@ -25,6 +25,7 @@ const Cart = () => {
 						{idCompra}
 					</span>
 				</h2>
+				<ButtonHome />
 			</>
 		);
 	}
@@ -87,17 +88,7 @@ const Cart = () => {
 					onClick={clear}>
 					Clear Cart
 				</button>
-				<Link to="/">
-					<button
-						style={{
-							fontSize: "1.5rem",
-							lineHeight: "1.5rem",
-							borderRadius: ".5rem",
-							padding: ".5rem",
-						}}>
-						Home
-					</button>
-				</Link>
+				<ButtonHome />
 			</div>
 		</div>
 	);

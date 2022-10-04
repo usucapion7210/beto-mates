@@ -33,7 +33,6 @@ export const Counter = ({ stock, initial = 0, onAdd }) => {
 				<button className="count_button" onClick={restar}>
 					Restar
 				</button>
-				{/* <button onClick={restar}>Restar</button> */}
 			</div>
 			{count === 0 ? (
 				<h2>no hay productos agregados</h2>
@@ -49,5 +48,3 @@ export const Counter = ({ stock, initial = 0, onAdd }) => {
 		</div>
 	);
 };
-
-// export default ItemCount;

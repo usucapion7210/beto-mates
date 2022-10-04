@@ -3,7 +3,6 @@ import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
-// import products from "../../mocks/productos";
 import "./itemListContainer.css";
 
 export const ItemListContainer = (props) => {
@@ -14,7 +13,6 @@ export const ItemListContainer = (props) => {
 
 	useEffect(() => {
 		const itemsCollections = collection(db, "productosDeportivos");
-		// const q = query(itemsCollections, where("category", "==", id));
 
 		const referencia = id
 			? query(itemsCollections, where("category", "==", id))

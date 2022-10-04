@@ -1,11 +1,8 @@
 import React from "react";
 import { Item } from "../Item/Item";
 import "./itemList.css";
-// import { Link } from "react-router-dom";
 
 export const ItemList = ({ productList }) => {
-	// console.log("Soy product List", productList);
-
 	return (
 		<div className="itemList-container">
 			{productList?.map((i) => (
@@ -22,5 +19,3 @@ export const ItemList = ({ productList }) => {
 		</div>
 	);
 };
-
-// export default ItemList

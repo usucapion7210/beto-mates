@@ -2,7 +2,6 @@
 
      width: 400px;
      box-shadow: 10px 5px 5px black;
-     ;
      display: flex;
      flex-direction: column;
      justify-content: space-around;
@@ -13,8 +12,6 @@
      border-radius: 10px;
      font-size: 1rem;
      padding: .5rem;
-     /* background-color: pink; */
-     /* gap: .5rem; */
 }
 
 .item {

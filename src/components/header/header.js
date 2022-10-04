@@ -10,7 +10,6 @@ const Header = () => {
 		<header className={estilos.header}>
 			<Brand />
 			<Navbar />
-			{/* <CartWidget /> */}
 		</header>
 	);
 };

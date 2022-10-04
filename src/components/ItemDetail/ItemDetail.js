@@ -26,9 +26,6 @@ const ItemDetail = ({ item }) => {
 				<p className="detail-detallle"> {item.description} </p>
 				<h2 className="detail-price">precio: $ {item.price} </h2>
 				<span className="detail-stock"> stock: {item.stock} </span>
-				{/* <Link to={`detail/ ${item.id}`}>
-					<button> Detalles</button>
-				</Link> */}
 				{quantity === 0 ? (
 					<Counter initial={cantidad} stock={item.stock} onAdd={onAdd} />
 				) : (
