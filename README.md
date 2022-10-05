@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Proyecto Final- Curso react.js de Coderhouse- comision 37080.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App e-commerce de venta de articulos derportivos.
 
-## Available Scripts
+La presente aplicación e-commerce fue realizada a los solos efectos educativos por el alumno Roberto Daniel Trezzini, para la aprobación del curso de React.js\_ comisión 37080 de la plataforma educativa digital "Coderhouse".
 
-In the project directory, you can run:
+Se trata de la creacion de una aplicación e-commerce (carrito de compras) de venta de indumentaria deportiva, apuntando a la venta de equipaciones de clubes de futbol.
 
-### `npm start`
+Para llevar adelante esta aplicacion, se utilizó el framework react.js
+ver. 18.2.0. Para más información:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+https://es.reactjs.org/
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para su instalacion se utilizo el entorno de javascript [node.js](https://nodejs.org/es/) en su version v16.17.0. Para más información consultar en:
 
-### `npm test`
+```
+https://nodejs.org/es/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+Tambien se descargaron módulos necesarios para la ejecución de la aplicación, usando el [npm.js](https://www.npmjs.com/) ("Node Packager Manager").Para más información consultar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+https://www.npmjs.com/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Copia en repositorio de GitHub.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se creo un repositorio en la aplicacion [Github](https://github.com/), de donde se puede realizar su consulta y ejecucion de la aplicacion localmente. El repositorio se puede buscar en
 
-### `npm run eject`
+```
+https://github.com/usucapion7210/beto-mates.
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Ejecución del proyecto de forma local.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para la ejecución de forma local debera proceder con los siguientes códigos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Realizar un clone del repositorio:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+$git clone https://github.com/usucapion7210/beto-mates.git
+```
 
-## Learn More
+Instalar los modulos del npm:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para que se ejecute en un servidor local:
 
-### Code Splitting
+```
+$npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Para más informacion consutltar en:
 
-### Analyzing the Bundle Size
+```
+https://github.com/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Host de la aplicación
 
-### Making a Progressive Web App
+Se ha realizado un deploy de la aplicación, pudiendo verse la aplicación en ejecucion a través de:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://soccer-sportwear.vercel.app/
+El deploy se realizo con la aplicacion vercel.com
+Para mas informacion consultar en https://vercel.com/
 
-### Advanced Configuration
+## Librereias utilizadas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para la aplicacion se utilizaron las siguientes librerias :
 
-### Deployment
+- react-dom: v. 18.2.0,
+- react-router-dom: 6.3.0,
+- react-icons: 4.4.0,
+- firebase: 9.10.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###### © Robert Daniel Trezzini, 2022.-

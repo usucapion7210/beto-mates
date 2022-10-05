@@ -34,7 +34,7 @@ const Cart = () => {
 		return (
 			<h2>
 				No se ha agregado ningun producto... Si deseas hacerlo has click
-				<Link style={{ color: "rgb(79, 98, 242)" }} to={"/"}>
+				<Link style={{ color: "rgb(79, 98, 242)", fontSize: "4rem" }} to={"/"}>
 					aquí
 				</Link>
 			</h2>
